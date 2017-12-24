@@ -9,13 +9,13 @@ import App from './components/app';
 import PostsIndex from './components/posts_index'
 import PostsShow from './components/posts_show'
 import PostsNew from './components/posts_new'
-import reducers from './reducers';
+import reducer from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
+  <Provider store={createStoreWithMiddleware(reducer)}>
     <Router>
       <div>
         <Switch>
@@ -27,7 +27,4 @@ ReactDOM.render(
     </Router>
   </Provider>
   , document.querySelector('.container'));
-
-
-  //        
-  //
+  
